@@ -1,11 +1,11 @@
 using TMPro;
 using UnityEngine;
 
-public class WriteClock : MonoBehaviour {
+public sealed class WriteClock : MonoBehaviour {
     [SerializeField]
     TMP_Text text;
 
-    protected void Update() {
+    void Update() {
         int day = (int)(GameClock.time / 24);
         int hour = (int)(GameClock.time - (day * 24));
         int minute = (int)((GameClock.time - (day * 24) - hour) * 60);

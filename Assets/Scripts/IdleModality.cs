@@ -1,6 +1,6 @@
 using UnityEngine;
 
 [CreateAssetMenu]
-public class IdleModality : ModalityBase {
+public sealed class IdleModality : ModalityBase {
     protected override bool CanOpen() => true;
 }
