@@ -14,7 +14,7 @@ unityPipeline {
     
     // which platforms to deploy to
     DEPLOY_TO_STEAM = '0'
-    DEPLOY_TO_ITCH = '0'
+    DEPLOY_TO_ITCH = '1'
     
     // configration for deploying to steam
     STEAM_ID = ''
@@ -22,7 +22,7 @@ unityPipeline {
     STEAM_CREDENTIALS = ''
     
     // configuration for deploying to itch
-    ITCH_ID = 'faulo/mixed-media-jam'
+    ITCH_ID = 'faulo/doko-dont'
 	ITCH_CREDENTIALS = 'Faulo-itch.io'
 }
 
