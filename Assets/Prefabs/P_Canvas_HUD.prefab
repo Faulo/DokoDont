@@ -575,7 +575,7 @@ MonoBehaviour:
   sleepingModality: {fileID: 11400000, guid: f21c88cb8b6c17745907b6c51aaacccc, type: 2}
   buttons: {fileID: 8645180820276140025}
   credits: {fileID: 7096834692447856632}
-  abortTime: 60
+  abortTime: 69
 --- !u!1 &4113856751873313703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,4 +1628,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 9
-  multiplier: 10
+  multiplier: 1
