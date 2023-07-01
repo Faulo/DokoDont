@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-public sealed class WriteClock : MonoBehaviour {
+public sealed class PrintClock : MonoBehaviour {
     [SerializeField]
     TMP_Text text;
 

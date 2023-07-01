@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: GameJam
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
+  text: Working hard on a game jam entry!

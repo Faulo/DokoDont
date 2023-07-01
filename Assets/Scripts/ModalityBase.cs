@@ -1,6 +1,7 @@
 using UnityEngine;
 
 public abstract class ModalityBase : ScriptableObject {
+
     int value;
 
     public void Increment() {
@@ -10,9 +11,14 @@ public abstract class ModalityBase : ScriptableObject {
     [SerializeField]
     GameObject prefab;
 
+    [SerializeField]
+    public string text = "Now doing: Nothing";
+
     GameObject instance;
+
     public void TryStart(GameObject button) {
-        if (CanOpen()) {
+        if (!instance && CanOpen()) {
+            HUD.currentModality = this;
             instance = Instantiate(prefab);
         }
     }

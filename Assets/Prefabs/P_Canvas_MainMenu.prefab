@@ -34,8 +34,8 @@ RectTransform:
   m_Father: {fileID: 5802758111539362645}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0.25}
+  m_AnchorMax: {x: 0.3, y: 0.75}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -199,13 +199,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 920426734115292593, guid: 0089b556352212c4ea5056a153762369, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 4274955350743337683, guid: 0089b556352212c4ea5056a153762369, type: 3}
+        m_TargetAssemblyTypeName: CanvasController, Runtime
+        m_MethodName: InstantiatePrefab
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgument: {fileID: 3923370084901026165}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -467,7 +467,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2960822444985127268}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8923520848497866118}
+        m_TargetAssemblyTypeName: CanvasController, Runtime
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5704838022319656227
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +537,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: 50
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -545,6 +557,7 @@ GameObject:
   - component: {fileID: 5905813435606584006}
   - component: {fileID: 1711934624191359304}
   - component: {fileID: 7093339926463411397}
+  - component: {fileID: 8923520848497866118}
   m_Layer: 5
   m_Name: P_Canvas_MainMenu
   m_TagString: Untagged
@@ -567,7 +580,7 @@ RectTransform:
   - {fileID: 3827034977590257674}
   - {fileID: 4246767630350143011}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -637,6 +650,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8923520848497866118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639000870170787828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4f895851a29a947b45095447026c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7723275508534296311
 GameObject:
   m_ObjectHideFlags: 0

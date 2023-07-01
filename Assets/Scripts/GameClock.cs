@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public sealed class GameClock : MonoBehaviour {
-    public static float time { get; private set; }
+    public static float time { get; private set; } = 9;
 
     [SerializeField]
     int startTime = 9;

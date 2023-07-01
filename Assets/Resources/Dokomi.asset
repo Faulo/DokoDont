@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Dokomi
   m_EditorClassIdentifier: 
   prefab: {fileID: 0}
+  text: Presenting your latest games to the masses...

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Idle
   m_EditorClassIdentifier: 
   prefab: {fileID: 6639000870170787828, guid: d55ceb4b884315142845cf33e528c65f, type: 3}
+  text: 'Now doing: Nothing'
