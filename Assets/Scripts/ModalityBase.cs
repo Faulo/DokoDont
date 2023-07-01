@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class ModalityBase : ScriptableObject {
 
-    int value;
+    public int value { get; private set; }
 
     GameObject instance;
 

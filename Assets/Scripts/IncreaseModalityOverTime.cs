@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public sealed class IncreaseModality : MonoBehaviour {
+public sealed class IncreaseModalityOverTime : MonoBehaviour {
     [SerializeField]
     ModalityBase modality;
     [SerializeField]

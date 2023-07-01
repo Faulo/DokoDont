@@ -90,6 +90,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: -12
+  sign: -1
 --- !u!1 &920426734115292593
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,7 +472,7 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 50}
-  m_Pivot: {x: 0.5, y: 0}
+  m_Pivot: {x: 0.5, y: -0.5}
 --- !u!222 &67324255474867273
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1769595044424146798
+--- !u!1 &2062832888285956596
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,66 +8,67 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4246767630350143011}
-  - component: {fileID: 1746304734989750948}
-  - component: {fileID: 1892132274540587588}
+  - component: {fileID: 3062850457123743634}
+  - component: {fileID: 4649262001608250981}
+  - component: {fileID: 8666711711491038351}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4246767630350143011
+--- !u!224 &3062850457123743634
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769595044424146798}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 2062832888285956596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5802758111539362645}
+  m_Children:
+  - {fileID: 1277475294069939673}
+  m_Father: {fileID: 2686457452156760480}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.3, y: 0}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.000015258789, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1746304734989750948
+--- !u!222 &4649262001608250981
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769595044424146798}
+  m_GameObject: {fileID: 2062832888285956596}
   m_CullTransparentMesh: 1
---- !u!114 &1892132274540587588
+--- !u!114 &8666711711491038351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1769595044424146798}
-  m_Enabled: 0
+  m_GameObject: {fileID: 2062832888285956596}
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -76,6 +77,280 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2661879680932122693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277475294069939673}
+  - component: {fileID: 6600241857634021361}
+  - component: {fileID: 4469702904805302160}
+  - component: {fileID: 2069374947359905026}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1277475294069939673
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661879680932122693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3062850457123743634}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000015258789, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6600241857634021361
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661879680932122693}
+  m_CullTransparentMesh: 1
+--- !u!114 &4469702904805302160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661879680932122693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "namespace CursedBroom.Game.Player {\r\n    public sealed class AvatarController
+    : MonoBehaviour, IActor {\r\n        #region Singleton\r\n\r\n        public
+    static bool TryGetInstance(out AvatarController instance) {\r\n#if UNITY_EDITOR\r\n           
+    if (!UnityEditor.EditorApplication.isPlaying) {\r\n                var stage
+    = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();\r\n               
+    if (stage) {\r\n                    instance = stage.FindComponentOfType<AvatarController>();\r\n                   
+    if (instance) {\r\n                        return instance;\r\n                   
+    }\r\n                }\r\n\r\n                instance = FindObjectOfType<AvatarController>();\r\n               
+    return instance;\r\n            }\r\n#endif\r\n            instance = GameManager.isInitialized\r\n               
+    ? GameManager.instance.currentAvatar\r\n                : default;\r\n           
+    return instance;\r\n        }\r\n\r\n        public static bool TryGetBone(AvatarBone
+    bone, out Transform transform) {\r\n            if (TryGetInstance(out var avatar))
+    {\r\n                transform = avatar.visuals.GetBone(bone);\r\n               
+    return transform;\r\n            }\r\n\r\n            transform = default;\r\n           
+    return false;\r\n        }\r\n\r\n        public static Vector3Int gridPosition;\r\n\r\n#if
+    UNITY_EDITOR\r\n        internal const string PREFAB_ID = \"P_Avatar\";\r\n       
+    internal static bool TryGetPrefab(out GameObject prefab) {\r\n            var
+    handle = Addressables.LoadAssetAsync<GameObject>(PREFAB_ID);\r\n            prefab
+    = handle.WaitForCompletion();\r\n            return prefab;\r\n        }\r\n#endif\r\n       
+    #endregion\r\n\r\n        #region Events\r\n        public static event Action
+    onSpawn;\r\n\r\n        public static event Action<float> onUpdateIntentions;\r\n       
+    public static event Action<float> onUpdateLogic;\r\n        public static event
+    Action<float> onUpdatePhysics;\r\n\r\n        public static event Action<float>
+    onUpdateVisuals;\r\n        public static event Action onDeath;\r\n        public
+    static event Action onChangeUpgrades;\r\n        public static event Action onSave;\r\n       
+    public static event Action onLoad;\r\n        public static event Action<Vector3>
+    onTeleport;\r\n        #endregion\r\n\r\n        #region Fields & Properties\r\n\r\n       
+    [Header(\"Avatar Data\")]\r\n        [SerializeField]\r\n        internal AvatarIntentionsData
+    intentions = new();\r\n        [SerializeField]\r\n        internal AvatarPhysicsData
+    physics = new();\r\n        public bool isGrounded => physics.isGrounded;\r\n       
+    public bool isCeiled => physics.isCeiled;\r\n        [SerializeField]\r\n       
+    internal AvatarVisualsData visuals = new();\r\n        [SerializeField]\r\n       
+    internal AvatarBroomData broom = new();\r\n        public bool isFlying => broom.isFlying;\r\n       
+    [SerializeField]\r\n        internal AvatarParticlesData particles = new();\r\n       
+    [SerializeField]\r\n        internal AvatarRumbleData rumble = new();\r\n       
+    [SerializeField]\r\n        internal AvatarCameraData cam = new();\r\n\r\n       
+    IAvatarData[] models;\r\n        bool modelsEnabled;\r\n\r\n        [Header(\"Game
+    States\")]\r\n        [SerializeField, Expandable]\r\n        BoolState canJumpState
+    = default;\r\n        public bool canJump => canJumpState.value;\r\n\r\n       
+    [SerializeField, Expandable]\r\n        BoolState canLoadState = default;\r\n       
+    public bool canLoad => canLoadState.value;\r\n\r\n        [SerializeField, Expandable]\r\n       
+    BoolState canSaveState = default;\r\n        public bool canSave => canSaveState.value;\r\n\r\n       
+    [SerializeField, Expandable]\r\n        BoolState canFlyState = default;\r\n       
+    public bool canFly => canFlyState.value;\r\n\r\n        [SerializeField, Expandable]\r\n       
+    BoolState canWallJumpState = default;\r\n        public bool canWallJump => canWallJumpState.value;\r\n\r\n       
+    [SerializeField, Expandable]\r\n        BoolState canFlyLoopingState = default;\r\n       
+    public bool canFlyLooping => canFlyLoopingState.value;\r\n\r\n        public
+    int collectableCount => collectableCountAsset.value;\r\n        [SerializeField]\r\n       
+    CollectableCount collectableCountAsset = default;\r\n\r\n        [field: SerializeField,
+    ReadOnly]\r\n        public bool isSpawned { get; private set; } = false;\r\n       
+    [field: SerializeField, ReadOnly]\r\n        internal AvatarUpgrades currentUpgrades
+    { get; private set; } = default;\r\n\r\n        #endregion\r\n\r\n        #region
+    Unity Callbacks\r\n\r\n        void Awake() {\r\n            models = new IAvatarData[]
+    { visuals, physics, intentions, broom, particles, rumble, cam };\r\n           
+    state = new(gameObject);\r\n        }\r\n\r\n        void OnEnable() {\r\n           
+    isSpawned = false;\r\n\r\n            SetUpDefaults();\r\n\r\n            canJumpState.onStateChange
+    += InvokeUpgradeChange;\r\n            canLoadState.onStateChange += InvokeUpgradeChange;\r\n           
+    canSaveState.onStateChange += InvokeUpgradeChange;\r\n            canFlyState.onStateChange
+    += InvokeUpgradeChange;\r\n            canWallJumpState.onStateChange += InvokeUpgradeChange;\r\n           
+    canFlyLoopingState.onStateChange += InvokeUpgradeChange;\r\n\r\n            models.ForEach(data
+    => data.Enable(this));\r\n            modelsEnabled = true;\r\n        }\r\n\r\n       
+    void SetUpDefaults() {\r\n            if (!canJumpState) {\r\n               
+    canJumpState = BoolState.newInstance;\r\n            }\r\n\r\n            if
+    (!canLoadState) {\r\n                canLoadState = BoolState.newInstance;\r\n           
+    }\r\n\r\n            if (!canSaveState) {\r\n                canSaveState = BoolState.newInstance;\r\n           
+    }\r\n\r\n            if (!canFlyState) {\r\n                canFlyState = BoolState.newInstance;\r\n           
+    }\r\n\r\n            if (!canWallJumpState) {\r\n                canWallJumpState
+    = BoolState.newInstance;\r\n            }\r\n\r\n            if (!canFlyLoopingState)
+    {\r\n                canFlyLoopingState = BoolState.newInstance;\r\n           
+    }\r\n        }\r\n\r\n        void OnDisable() {\r\n            models.ForEach(data
+    => data.Disable());\r\n            modelsEnabled = false;\r\n\r\n           
+    canJumpState.onStateChange -= InvokeUpgradeChange;\r\n            canLoadState.onStateChange
+    -= InvokeUpgradeChange;\r\n            canSaveState.onStateChange -= InvokeUpgradeChange;\r\n           
+    canFlyState.onStateChange -= InvokeUpgradeChange;\r\n            canWallJumpState.onStateChange
+    -= InvokeUpgradeChange;\r\n            canFlyLoopingState.onStateChange -= InvokeUpgradeChange;\r\n       
+    }\r\n\r\n#if UNITY_EDITOR\r\n        void OnDrawGizmos() {\r\n            if
+    (modelsEnabled) {\r\n                models.ForEach(data => data.OnDrawGizmos());\r\n           
+    }\r\n        }\r\n#endif\r\n\r\n        IEnumerator Start() {\r\n           
+    GameManager.instance.currentAvatar = this;\r\n\r\n            yield return null;\r\n\r\n           
+    if (GameManager.instance.currentLevel) {\r\n                GameManager.instance.currentLevel.SetActor(transform);\r\n               
+    GameManager.instance.currentLevel.AddObservable(state);\r\n\r\n               
+    yield return new WaitUntil(() => GameManager.instance.currentLevel.isReady);\r\n           
+    }\r\n\r\n            Spawn();\r\n        }\r\n\r\n        [ContextMenu(\"Force
+    Spawn\")]\r\n        void Spawn() {\r\n            Assert.IsFalse(isSpawned);\r\n           
+    state.position = physics.position2D;\r\n            isSpawned = true;\r\n           
+    onSpawn?.Invoke();\r\n            InvokeUpgradeChange(false);\r\n        }\r\n       
+    static readonly ProfilerMarker s_onUpdateIntentionsMarker = new(\"AvatarController.onUpdateIntentions\");\r\n       
+    static readonly ProfilerMarker s_onUpdateLogicMarker = new(\"AvatarController.onUpdateLogic\");\r\n       
+    static readonly ProfilerMarker s_processPhysicsMarker = new(\"AvatarController.processPhysics\");\r\n       
+    static readonly ProfilerMarker s_onUpdatePhysicsMarker = new(\"AvatarController.onUpdatePhysics\");\r\n       
+    static readonly ProfilerMarker s_onUpdateVisualsMarker = new(\"AvatarController.onUpdateVisuals\");\r\n\r\n       
+    void Update() {\r\n            if (!isSpawned) {\r\n                return;\r\n           
+    }\r\n\r\n            using (s_onUpdateVisualsMarker.Auto()) {\r\n               
+    onUpdateVisuals?.Invoke(Time.deltaTime);\r\n            }\r\n        }\r\n       
+    void FixedUpdate() {\r\n            if (!isSpawned) {\r\n                return;\r\n           
+    }\r\n\r\n            if (GameManager.isInitialized && GameManager.instance.isPaused)
+    {\r\n                return;\r\n            }\r\n\r\n            float deltaTime
+    = Time.deltaTime;\r\n\r\n            using (s_onUpdateIntentionsMarker.Auto())
+    {\r\n                onUpdateIntentions?.Invoke(deltaTime);\r\n            }\r\n\r\n           
+    using (s_onUpdateLogicMarker.Auto()) {\r\n                onUpdateLogic?.Invoke(deltaTime);\r\n           
+    }\r\n\r\n            using (s_processPhysicsMarker.Auto()) {\r\n               
+    physics.Process(deltaTime);\r\n            }\r\n\r\n            using (s_onUpdatePhysicsMarker.Auto())
+    {\r\n                onUpdatePhysics?.Invoke(deltaTime);\r\n            }\r\n       
+    }\r\n\r\n        void InvokeUpgradeChange(bool value) {\r\n            currentUpgrades
+    = CalculateUpgrades();\r\n            onChangeUpgrades?.Invoke();\r\n       
+    }\r\n        AvatarUpgrades CalculateUpgrades() {\r\n            if (canSave)
+    {\r\n                if (canFly) {\r\n                    if (canWallJump) {\r\n                       
+    if (canFlyLooping) {\r\n                            return AvatarUpgrades.TeleportFlyWallJumpLooping;\r\n                       
+    }\r\n\r\n                        return AvatarUpgrades.TeleportFlyWallJump;\r\n                   
+    }\r\n\r\n                    return AvatarUpgrades.TeleportFly;\r\n               
+    }\r\n\r\n                return AvatarUpgrades.Teleport;\r\n            }\r\n\r\n           
+    return AvatarUpgrades.None;\r\n        }\r\n\r\n        #endregion\r\n\r\n       
+    #region Save/Load\r\n        public void Die() {\r\n            onDeath?.Invoke();\r\n       
+    }\r\n\r\n        AvatarSaveState state;\r\n\r\n        public void StateSave()
+    {\r\n            state.position = physics.position2D;\r\n            state.rotationAngle
+    = physics.rotation2D;\r\n            state.velocity = physics.velocity;\r\n           
+    state.facing = physics.facing;\r\n\r\n            canLoadState.value = true;\r\n\r\n           
+    onSave?.Invoke();\r\n        }\r\n        public void StateLoad() {\r\n           
+    physics.rotation2D = state.rotationAngle;\r\n            physics.facing = state.facing;\r\n           
+    physics.velocity = state.velocity;\r\n\r\n            onLoad?.Invoke();\r\n\r\n           
+    TeleportTo(state.position);\r\n        }\r\n        public void TeleportTo(Vector2
+    position) {\r\n            var delta = position - physics.position2D;\r\n           
+    physics.position2D = position;\r\n\r\n            onTeleport?.Invoke(delta);\r\n       
+    }\r\n        #endregion\r\n\r\n    }\r\n}\r\n"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 20a37a0533099704bb79e66372ff5e63, type: 2}
+  m_sharedMaterial: {fileID: 5796019978863859119, guid: 20a37a0533099704bb79e66372ff5e63, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 8
+  m_fontSizeBase: 8
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 4, y: 4, z: 4, w: 4}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2069374947359905026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661879680932122693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f02254eb71d5a64e80be45ae80010ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  modality: {fileID: 11400000, guid: 4ceed7e1d112e6e48914422c275b4a32, type: 2}
+  asset: {fileID: 4900000, guid: f200d403a19bb834083514e2797456fe, type: 3}
+  text: {fileID: 4469702904805302160}
 --- !u!1 &6044814846284308670
 GameObject:
   m_ObjectHideFlags: 0
@@ -85,7 +360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8322834917259821315}
-  - component: {fileID: 7122103183597991720}
+  - component: {fileID: 3071828837177629610}
   m_Layer: 5
   m_Name: Modality
   m_TagString: Untagged
@@ -113,7 +388,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7122103183597991720
+--- !u!114 &3071828837177629610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,11 +397,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6044814846284308670}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c44985a2dc35c84c931029538f9bec9, type: 3}
+  m_Script: {fileID: 11500000, guid: 39fc147847117104c9184628a3b7f41d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   modality: {fileID: 11400000, guid: 4ceed7e1d112e6e48914422c275b4a32, type: 2}
-  multiplier: 100
 --- !u!1 &6639000870170787828
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +433,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4246767630350143011}
+  - {fileID: 2686457452156760480}
   - {fileID: 8322834917259821315}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -187,7 +461,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 1
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -244,3 +518,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4f895851a29a947b45095447026c31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7233213450938595179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2686457452156760480}
+  - component: {fileID: 6107721800452827010}
+  - component: {fileID: 7709078655653480191}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2686457452156760480
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233213450938595179}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3062850457123743634}
+  m_Father: {fileID: 5802758111539362645}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.25}
+  m_AnchorMax: {x: 0.9, y: 0.75}
+  m_AnchoredPosition: {x: -0.000061035156, y: -0.000030517578}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6107721800452827010
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233213450938595179}
+  m_CullTransparentMesh: 1
+--- !u!114 &7709078655653480191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233213450938595179}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1

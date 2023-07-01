@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public sealed class HUD : MonoBehaviour {
     [SerializeField]
@@ -24,6 +25,10 @@ public sealed class HUD : MonoBehaviour {
         idlingModality.TryStart(default);
         buttons.SetActive(true);
         credits.SetActive(false);
+    }
+
+    public void ReloadScene() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     void Update() {

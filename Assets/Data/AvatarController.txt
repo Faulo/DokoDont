@@ -1,0 +1,319 @@
+namespace CursedBroom.Game.Player {
+    public sealed class AvatarController : MonoBehaviour, IActor {
+        #region Singleton
+
+        public static bool TryGetInstance(out AvatarController instance) {
+#if UNITY_EDITOR
+            if (!UnityEditor.EditorApplication.isPlaying) {
+                var stage = UnityEditor.SceneManagement.PrefabStageUtility.GetCurrentPrefabStage();
+                if (stage) {
+                    instance = stage.FindComponentOfType<AvatarController>();
+                    if (instance) {
+                        return instance;
+                    }
+                }
+
+                instance = FindObjectOfType<AvatarController>();
+                return instance;
+            }
+#endif
+            instance = GameManager.isInitialized
+                ? GameManager.instance.currentAvatar
+                : default;
+            return instance;
+        }
+
+        public static bool TryGetBone(AvatarBone bone, out Transform transform) {
+            if (TryGetInstance(out var avatar)) {
+                transform = avatar.visuals.GetBone(bone);
+                return transform;
+            }
+
+            transform = default;
+            return false;
+        }
+
+        public static Vector3Int gridPosition;
+
+#if UNITY_EDITOR
+        internal const string PREFAB_ID = "P_Avatar";
+        internal static bool TryGetPrefab(out GameObject prefab) {
+            var handle = Addressables.LoadAssetAsync<GameObject>(PREFAB_ID);
+            prefab = handle.WaitForCompletion();
+            return prefab;
+        }
+#endif
+        #endregion
+
+        #region Events
+        public static event Action onSpawn;
+
+        public static event Action<float> onUpdateIntentions;
+        public static event Action<float> onUpdateLogic;
+        public static event Action<float> onUpdatePhysics;
+
+        public static event Action<float> onUpdateVisuals;
+        public static event Action onDeath;
+        public static event Action onChangeUpgrades;
+        public static event Action onSave;
+        public static event Action onLoad;
+        public static event Action<Vector3> onTeleport;
+        #endregion
+
+        #region Fields & Properties
+
+        [Header("Avatar Data")]
+        [SerializeField]
+        internal AvatarIntentionsData intentions = new();
+        [SerializeField]
+        internal AvatarPhysicsData physics = new();
+        public bool isGrounded => physics.isGrounded;
+        public bool isCeiled => physics.isCeiled;
+        [SerializeField]
+        internal AvatarVisualsData visuals = new();
+        [SerializeField]
+        internal AvatarBroomData broom = new();
+        public bool isFlying => broom.isFlying;
+        [SerializeField]
+        internal AvatarParticlesData particles = new();
+        [SerializeField]
+        internal AvatarRumbleData rumble = new();
+        [SerializeField]
+        internal AvatarCameraData cam = new();
+
+        IAvatarData[] models;
+        bool modelsEnabled;
+
+        [Header("Game States")]
+        [SerializeField, Expandable]
+        BoolState canJumpState = default;
+        public bool canJump => canJumpState.value;
+
+        [SerializeField, Expandable]
+        BoolState canLoadState = default;
+        public bool canLoad => canLoadState.value;
+
+        [SerializeField, Expandable]
+        BoolState canSaveState = default;
+        public bool canSave => canSaveState.value;
+
+        [SerializeField, Expandable]
+        BoolState canFlyState = default;
+        public bool canFly => canFlyState.value;
+
+        [SerializeField, Expandable]
+        BoolState canWallJumpState = default;
+        public bool canWallJump => canWallJumpState.value;
+
+        [SerializeField, Expandable]
+        BoolState canFlyLoopingState = default;
+        public bool canFlyLooping => canFlyLoopingState.value;
+
+        public int collectableCount => collectableCountAsset.value;
+        [SerializeField]
+        CollectableCount collectableCountAsset = default;
+
+        [field: SerializeField, ReadOnly]
+        public bool isSpawned { get; private set; } = false;
+        [field: SerializeField, ReadOnly]
+        internal AvatarUpgrades currentUpgrades { get; private set; } = default;
+
+        #endregion
+
+        #region Unity Callbacks
+
+        void Awake() {
+            models = new IAvatarData[] { visuals, physics, intentions, broom, particles, rumble, cam };
+            state = new(gameObject);
+        }
+
+        void OnEnable() {
+            isSpawned = false;
+
+            SetUpDefaults();
+
+            canJumpState.onStateChange += InvokeUpgradeChange;
+            canLoadState.onStateChange += InvokeUpgradeChange;
+            canSaveState.onStateChange += InvokeUpgradeChange;
+            canFlyState.onStateChange += InvokeUpgradeChange;
+            canWallJumpState.onStateChange += InvokeUpgradeChange;
+            canFlyLoopingState.onStateChange += InvokeUpgradeChange;
+
+            models.ForEach(data => data.Enable(this));
+            modelsEnabled = true;
+        }
+
+        void SetUpDefaults() {
+            if (!canJumpState) {
+                canJumpState = BoolState.newInstance;
+            }
+
+            if (!canLoadState) {
+                canLoadState = BoolState.newInstance;
+            }
+
+            if (!canSaveState) {
+                canSaveState = BoolState.newInstance;
+            }
+
+            if (!canFlyState) {
+                canFlyState = BoolState.newInstance;
+            }
+
+            if (!canWallJumpState) {
+                canWallJumpState = BoolState.newInstance;
+            }
+
+            if (!canFlyLoopingState) {
+                canFlyLoopingState = BoolState.newInstance;
+            }
+        }
+
+        void OnDisable() {
+            models.ForEach(data => data.Disable());
+            modelsEnabled = false;
+
+            canJumpState.onStateChange -= InvokeUpgradeChange;
+            canLoadState.onStateChange -= InvokeUpgradeChange;
+            canSaveState.onStateChange -= InvokeUpgradeChange;
+            canFlyState.onStateChange -= InvokeUpgradeChange;
+            canWallJumpState.onStateChange -= InvokeUpgradeChange;
+            canFlyLoopingState.onStateChange -= InvokeUpgradeChange;
+        }
+
+#if UNITY_EDITOR
+        void OnDrawGizmos() {
+            if (modelsEnabled) {
+                models.ForEach(data => data.OnDrawGizmos());
+            }
+        }
+#endif
+
+        IEnumerator Start() {
+            GameManager.instance.currentAvatar = this;
+
+            yield return null;
+
+            if (GameManager.instance.currentLevel) {
+                GameManager.instance.currentLevel.SetActor(transform);
+                GameManager.instance.currentLevel.AddObservable(state);
+
+                yield return new WaitUntil(() => GameManager.instance.currentLevel.isReady);
+            }
+
+            Spawn();
+        }
+
+        [ContextMenu("Force Spawn")]
+        void Spawn() {
+            Assert.IsFalse(isSpawned);
+            state.position = physics.position2D;
+            isSpawned = true;
+            onSpawn?.Invoke();
+            InvokeUpgradeChange(false);
+        }
+        static readonly ProfilerMarker s_onUpdateIntentionsMarker = new("AvatarController.onUpdateIntentions");
+        static readonly ProfilerMarker s_onUpdateLogicMarker = new("AvatarController.onUpdateLogic");
+        static readonly ProfilerMarker s_processPhysicsMarker = new("AvatarController.processPhysics");
+        static readonly ProfilerMarker s_onUpdatePhysicsMarker = new("AvatarController.onUpdatePhysics");
+        static readonly ProfilerMarker s_onUpdateVisualsMarker = new("AvatarController.onUpdateVisuals");
+
+        void Update() {
+            if (!isSpawned) {
+                return;
+            }
+
+            using (s_onUpdateVisualsMarker.Auto()) {
+                onUpdateVisuals?.Invoke(Time.deltaTime);
+            }
+        }
+        void FixedUpdate() {
+            if (!isSpawned) {
+                return;
+            }
+
+            if (GameManager.isInitialized && GameManager.instance.isPaused) {
+                return;
+            }
+
+            float deltaTime = Time.deltaTime;
+
+            using (s_onUpdateIntentionsMarker.Auto()) {
+                onUpdateIntentions?.Invoke(deltaTime);
+            }
+
+            using (s_onUpdateLogicMarker.Auto()) {
+                onUpdateLogic?.Invoke(deltaTime);
+            }
+
+            using (s_processPhysicsMarker.Auto()) {
+                physics.Process(deltaTime);
+            }
+
+            using (s_onUpdatePhysicsMarker.Auto()) {
+                onUpdatePhysics?.Invoke(deltaTime);
+            }
+        }
+
+        void InvokeUpgradeChange(bool value) {
+            currentUpgrades = CalculateUpgrades();
+            onChangeUpgrades?.Invoke();
+        }
+        AvatarUpgrades CalculateUpgrades() {
+            if (canSave) {
+                if (canFly) {
+                    if (canWallJump) {
+                        if (canFlyLooping) {
+                            return AvatarUpgrades.TeleportFlyWallJumpLooping;
+                        }
+
+                        return AvatarUpgrades.TeleportFlyWallJump;
+                    }
+
+                    return AvatarUpgrades.TeleportFly;
+                }
+
+                return AvatarUpgrades.Teleport;
+            }
+
+            return AvatarUpgrades.None;
+        }
+
+        #endregion
+
+        #region Save/Load
+        public void Die() {
+            onDeath?.Invoke();
+        }
+
+        AvatarSaveState state;
+
+        public void StateSave() {
+            state.position = physics.position2D;
+            state.rotationAngle = physics.rotation2D;
+            state.velocity = physics.velocity;
+            state.facing = physics.facing;
+
+            canLoadState.value = true;
+
+            onSave?.Invoke();
+        }
+        public void StateLoad() {
+            physics.rotation2D = state.rotationAngle;
+            physics.facing = state.facing;
+            physics.velocity = state.velocity;
+
+            onLoad?.Invoke();
+
+            TeleportTo(state.position);
+        }
+        public void TeleportTo(Vector2 position) {
+            var delta = position - physics.position2D;
+            physics.position2D = position;
+
+            onTeleport?.Invoke(delta);
+        }
+        #endregion
+
+    }
+}
