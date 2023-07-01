@@ -18,7 +18,6 @@ public abstract class ModalityBase : ScriptableObject {
 
     public void TryStart(GameObject button) {
         if (CanOpen(out string errorText)) {
-            HUD.status = text;
             HUD.currentModality = this;
         } else {
             HUD.status = errorText;
@@ -27,6 +26,7 @@ public abstract class ModalityBase : ScriptableObject {
 
     public void Start() {
         instance = Instantiate(prefab);
+        HUD.status = text;
     }
 
     public void Close() {
@@ -36,5 +36,5 @@ public abstract class ModalityBase : ScriptableObject {
         }
     }
 
-    protected abstract bool CanOpen(out string errorText);
+    public abstract bool CanOpen(out string errorText);
 }

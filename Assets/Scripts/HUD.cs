@@ -14,6 +14,12 @@ public sealed class HUD : MonoBehaviour {
         idlingModality.TryStart(default);
     }
 
+    void Update() {
+        if (!currentModality.CanOpen(out _)) {
+            currentModality = idlingModality;
+        }
+    }
+
     public static ModalityBase currentModality {
         get => m_currentModality;
 
