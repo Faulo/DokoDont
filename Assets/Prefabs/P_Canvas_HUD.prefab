@@ -70,10 +70,9 @@ MonoBehaviour:
   m_text: 'Congratulations!
 
 
-    You are a:
+    Your new position:
 
-
-'
+    <u><size=60><color=red>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -100,15 +99,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 71
-  m_fontSizeBase: 36
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -158,10 +157,9 @@ MonoBehaviour:
   template: 'Congratulations!
 
 
-    You are a:
+    Your new position:
 
-
-'
+    <u><size=60><color=red>'
   results: {fileID: 11400000, guid: 2bd893d7f51f1be4ebd8b6e7f377c115, type: 2}
 --- !u!1 &920426734115292593
 GameObject:
@@ -744,7 +742,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0 wishlists acquired
+  m_text: 8 wishlists acquired
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2364,8 +2362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd3448bc37e5ba4489ca92252aa58af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 9
-  multiplier: 1
+  settings: {fileID: 11400000, guid: 640f4e697dbb3d545b9db210afe1c84a, type: 2}
 --- !u!1 &9088320773093116010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,7 +2430,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4403 characters typed
+  m_text: 0 characters typed
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

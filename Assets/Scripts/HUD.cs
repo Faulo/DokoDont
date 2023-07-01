@@ -32,11 +32,12 @@ public sealed class HUD : MonoBehaviour {
     }
 
     void Update() {
-        if (!currentModality.CanOpen(out _)) {
+        if (!currentModality || !currentModality.CanOpen(out _)) {
             currentModality = idlingModality;
         }
 
         if (GameClock.time >= abortTime) {
+            currentModality = default;
             GameClock.isEnabled = false;
             buttons.SetActive(false);
             credits.SetActive(true);

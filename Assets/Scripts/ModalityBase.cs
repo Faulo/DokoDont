@@ -1,13 +1,17 @@
 using UnityEngine;
 
 public abstract class ModalityBase : ScriptableObject {
+    [SerializeField]
+    int startingValue = 0;
+    [SerializeField]
+    int maximumValue = 1000;
 
     public int value { get; private set; }
 
     GameObject instance;
 
     protected void OnEnable() {
-        value = 0;
+        value = startingValue;
         instance = null;
     }
 
@@ -25,6 +29,21 @@ public abstract class ModalityBase : ScriptableObject {
     public string unit = "";
 
     public string valueWithUnit => $"{value}{unit}";
+
+    public Grade valueAsGrade {
+        get {
+            float grade = (float)value / maximumValue;
+
+            return value switch {
+                _ when grade >= 1f => Grade.S,
+                _ when grade >= 0.9f => Grade.A,
+                _ when grade >= 0.75f => Grade.B,
+                _ when grade >= 0.5f => Grade.C,
+                _ when grade >= 0.2f => Grade.D,
+                _ => Grade.F,
+            };
+        }
+    }
 
     public void TryStart(GameObject button) {
         if (CanOpen(out string errorText)) {

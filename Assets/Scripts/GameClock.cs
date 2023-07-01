@@ -6,18 +6,16 @@ public sealed class GameClock : MonoBehaviour {
     public static bool isEnabled;
 
     [SerializeField]
-    int startTime = 9;
-    [SerializeField]
-    int multiplier = 1;
+    ClockSettings settings;
 
     void OnEnable() {
-        time = startTime;
+        time = settings.startTime;
         isEnabled = true;
     }
 
     void Update() {
         if (isEnabled) {
-            deltaTime = Time.deltaTime * multiplier;
+            deltaTime = Time.deltaTime * settings.multiplier;
             time += deltaTime;
         }
     }

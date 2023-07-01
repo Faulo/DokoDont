@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -14,18 +15,28 @@ public sealed class ResultsAsset : ScriptableObject {
     ModalityBase sleep;
 
     record Result {
-        public int dokomi;
-        public int gameJam;
-        public int sleep;
+        public Grade dokomi;
+        public Grade gameJam;
+        public Grade sleep;
         public string name;
     }
 
     List<Result> results;
 
-    public bool TryLookupResult(out string result) {
+    public bool TryLookupResult(out string name) {
         Initialize();
-        result = results.First().name;
-        return true;
+
+        foreach (var result in results) {
+            if (result.dokomi <= dokomi.valueAsGrade
+             && result.gameJam <= gameJam.valueAsGrade
+             && result.sleep <= sleep.valueAsGrade) {
+                name = result.name;
+                return true;
+            }
+        }
+
+        name = default;
+        return false;
     }
 
     void Initialize() {
@@ -36,9 +47,9 @@ public sealed class ResultsAsset : ScriptableObject {
             foreach (string row in rows) {
                 string[] fields = row.Split(',');
                 var result = new Result {
-                    dokomi = int.Parse(fields[0]),
-                    gameJam = int.Parse(fields[1]),
-                    sleep = int.Parse(fields[2]),
+                    dokomi = Enum.Parse<Grade>(fields[0]),
+                    gameJam = Enum.Parse<Grade>(fields[1]),
+                    sleep = Enum.Parse<Grade>(fields[2]),
                     name = fields[3],
                 };
                 results.Add(result);

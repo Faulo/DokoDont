@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb59ad1a6d2d9c408043b1ea9268e66, type: 3}
   m_Name: Sleep
   m_EditorClassIdentifier: 
+  startingValue: 0
+  maximumValue: 1280
   prefab: {fileID: 6639000870170787828, guid: 6b601107e51015341a1dacee9441dfb0, type: 3}
   text: ZZZzzzzzZZzzzzZZzz
   unit: ' minutes slept'
