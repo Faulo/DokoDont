@@ -8,8 +8,6 @@ public sealed class PrintModality : MonoBehaviour {
     TMP_Text text;
 
     void Update() {
-        text.text = HUD.currentModality
-            ? HUD.currentModality.text
-            : "";
+        text.text = HUD.status;
     }
 }

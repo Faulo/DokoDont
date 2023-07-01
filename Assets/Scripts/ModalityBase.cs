@@ -17,18 +17,24 @@ public abstract class ModalityBase : ScriptableObject {
     GameObject instance;
 
     public void TryStart(GameObject button) {
-        if (!instance && CanOpen()) {
+        if (CanOpen(out string errorText)) {
+            HUD.status = text;
             HUD.currentModality = this;
-            instance = Instantiate(prefab);
+        } else {
+            HUD.status = errorText;
         }
     }
 
-    public void TryClose() {
+    public void Start() {
+        instance = Instantiate(prefab);
+    }
+
+    public void Close() {
         if (instance) {
             Destroy(instance);
             instance = null;
         }
     }
 
-    protected abstract bool CanOpen();
+    protected abstract bool CanOpen(out string errorText);
 }

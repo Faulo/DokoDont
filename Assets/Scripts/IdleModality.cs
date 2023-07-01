@@ -2,5 +2,11 @@ using UnityEngine;
 
 [CreateAssetMenu]
 public sealed class IdleModality : ModalityBase {
-    protected override bool CanOpen() => true;
+    [SerializeField]
+    public string errorText = "Can't do this!";
+
+    protected override bool CanOpen(out string errorText) {
+        errorText = "";
+        return true;
+    }
 }

@@ -9,8 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfb59ad1a6d2d9c408043b1ea9268e66, type: 3}
+  m_Script: {fileID: 11500000, guid: f092993ecc04ec04eac5c2cdc15b06ae, type: 3}
   m_Name: Dokomi
   m_EditorClassIdentifier: 
-  prefab: {fileID: 0}
+  prefab: {fileID: 6639000870170787828, guid: 2c893c643a9ebc048ad495633e64c66b, type: 3}
   text: Presenting your latest games to the masses...
+  errorText: Dokomi isn't open at the moment!
+  openingTimes:
+  - {x: 13, y: 20}
+  - {x: 34, y: 44}
+  - {x: 58, y: 66}
