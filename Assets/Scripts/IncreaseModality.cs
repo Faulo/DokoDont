@@ -2,12 +2,14 @@ using UnityEngine;
 
 public sealed class IncreaseModality : MonoBehaviour {
     [SerializeField]
-    public ModalityBase modality;
+    ModalityBase modality;
+    [SerializeField]
+    int multiplier = 1;
 
     float timer;
 
     void Update() {
-        timer += Time.deltaTime;
+        timer += GameClock.deltaTime * multiplier;
         while (timer > 1) {
             modality.Increment();
             timer--;

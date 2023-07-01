@@ -4,6 +4,13 @@ public abstract class ModalityBase : ScriptableObject {
 
     int value;
 
+    GameObject instance;
+
+    protected void OnEnable() {
+        value = 0;
+        instance = null;
+    }
+
     public void Increment() {
         value++;
     }
@@ -18,8 +25,6 @@ public abstract class ModalityBase : ScriptableObject {
     public string unit = "";
 
     public string valueWithUnit => $"{value}{unit}";
-
-    GameObject instance;
 
     public void TryStart(GameObject button) {
         if (CanOpen(out string errorText)) {

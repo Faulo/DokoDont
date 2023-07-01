@@ -2,6 +2,7 @@ using UnityEngine;
 
 public sealed class GameClock : MonoBehaviour {
     public static float time { get; private set; } = 9;
+    public static float deltaTime;
     public static bool isEnabled;
 
     [SerializeField]
@@ -16,7 +17,8 @@ public sealed class GameClock : MonoBehaviour {
 
     void Update() {
         if (isEnabled) {
-            time += Time.deltaTime * multiplier;
+            deltaTime = Time.deltaTime * multiplier;
+            time += deltaTime;
         }
     }
 }

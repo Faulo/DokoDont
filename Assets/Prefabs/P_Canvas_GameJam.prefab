@@ -125,7 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c44985a2dc35c84c931029538f9bec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modality: {fileID: 11400000, guid: 67f7e6e7074442a459e6152b38e56f3a, type: 2}
+  modality: {fileID: 11400000, guid: 4ceed7e1d112e6e48914422c275b4a32, type: 2}
+  multiplier: 100
 --- !u!1 &6639000870170787828
 GameObject:
   m_ObjectHideFlags: 0
