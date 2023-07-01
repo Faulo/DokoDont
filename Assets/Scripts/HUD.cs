@@ -10,13 +10,31 @@ public sealed class HUD : MonoBehaviour {
     [SerializeField]
     ModalityBase sleepingModality;
 
+    [Space]
+    [SerializeField]
+    GameObject buttons;
+    [SerializeField]
+    GameObject credits;
+
+    [Space]
+    [SerializeField]
+    int abortTime = 60;
+
     void Start() {
         idlingModality.TryStart(default);
+        buttons.SetActive(true);
+        credits.SetActive(false);
     }
 
     void Update() {
         if (!currentModality.CanOpen(out _)) {
             currentModality = idlingModality;
+        }
+
+        if (GameClock.time >= abortTime) {
+            GameClock.isEnabled = false;
+            buttons.SetActive(false);
+            credits.SetActive(true);
         }
     }
 
