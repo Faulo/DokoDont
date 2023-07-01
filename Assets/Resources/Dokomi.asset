@@ -15,7 +15,7 @@ MonoBehaviour:
   startingValue: 0
   maximumValue: 100
   prefab: {fileID: 6639000870170787828, guid: 2c893c643a9ebc048ad495633e64c66b, type: 3}
-  text: Presenting your latest games to the masses...
+  text: Ready the business cards!
   unit: ' wishlists acquired'
   errorText: The venue isn't open at the moment!
   openingTimes:

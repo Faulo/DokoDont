@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f092993ecc04ec04eac5c2cdc15b06ae, type: 3}
   m_Name: GameJam
   m_EditorClassIdentifier: 
+  startingValue: 0
+  maximumValue: 1000
   prefab: {fileID: 6639000870170787828, guid: 0ba862f3f5740c240a55bd00c14aa3c6, type: 3}
-  text: Working hard on a game jam entry!
+  text: TIme to write some code!
   unit: ' characters typed'
   errorText: The game jam hasn't started yet!
   openingTimes:

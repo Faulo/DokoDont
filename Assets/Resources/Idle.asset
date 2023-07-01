@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfb59ad1a6d2d9c408043b1ea9268e66, type: 3}
   m_Name: Idle
   m_EditorClassIdentifier: 
+  startingValue: 0
+  maximumValue: 1000
   prefab: {fileID: 6639000870170787828, guid: d55ceb4b884315142845cf33e528c65f, type: 3}
-  text: 'Now doing: Nothing'
+  text: What do you want to do?
+  unit: 
+  errorText: Can't do this!

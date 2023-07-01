@@ -15,6 +15,6 @@ MonoBehaviour:
   startingValue: 0
   maximumValue: 1280
   prefab: {fileID: 6639000870170787828, guid: 6b601107e51015341a1dacee9441dfb0, type: 3}
-  text: ZZZzzzzzZZzzzzZZzz
+  text: Getting some shuteye...
   unit: ' minutes slept'
   errorText: You're not tired!
