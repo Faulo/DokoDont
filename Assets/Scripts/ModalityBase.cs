@@ -14,6 +14,11 @@ public abstract class ModalityBase : ScriptableObject {
     [SerializeField]
     public string text = "Now doing: Nothing";
 
+    [SerializeField]
+    public string unit = "";
+
+    public string valueWithUnit => $"{value}{unit}";
+
     GameObject instance;
 
     public void TryStart(GameObject button) {

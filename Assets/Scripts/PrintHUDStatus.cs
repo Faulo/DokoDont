@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public sealed class PrintModality : MonoBehaviour {
+public sealed class PrintHUDStatus : MonoBehaviour {
     [SerializeField]
     TMP_Text text;
 

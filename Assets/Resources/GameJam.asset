@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6639000870170787828, guid: 0ba862f3f5740c240a55bd00c14aa3c6, type: 3}
   text: Working hard on a game jam entry!
+  unit: ' characters typed'
   errorText: The game jam hasn't started yet!
   openingTimes:
   - {x: 17, y: 65}
