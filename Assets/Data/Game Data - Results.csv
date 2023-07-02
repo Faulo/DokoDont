@@ -1,13 +1,13 @@
 Dokomi,GameJam,Sleep,Result
 S,S,F,Cursed Creation
-A,F,B,Producer
-A,A,B,Game Director
+S,F,S,Producer
+B,A,B,Game Director
+A,B,B,Audio Director
+B,B,A,Art Director
+C,F,C,Community Manager
+F,B,B,Gil Dweller
 S,F,F,Marketing Director
 F,S,F,Technical Director
-C,F,C,Community Manager
-A,C,C,Audio Director
-D,C,A,Art Director
-F,B,B,Gil Dweller
-F,F,A,Product Owner
+F,F,S,Product Owner
 F,F,C,Company Sloth
 F,F,F,Intern
