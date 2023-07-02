@@ -11,9 +11,9 @@ public sealed class PrintClock : MonoBehaviour {
         int minute = (int)((GameClock.time - (day * 24) - hour) * 60);
 
         string dow = day switch {
-            0 => "Fr",
-            1 => "Sa",
-            _ => "So",
+            0 => "Fri",
+            1 => "Sat",
+            _ => "Sun",
         };
         text.text = $"{dow}, {hour:D2}:{minute:D2}";
     }
