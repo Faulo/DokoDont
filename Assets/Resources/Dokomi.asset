@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dokomi
   m_EditorClassIdentifier: 
   startingValue: 0
-  maximumValue: 100
+  maximumValue: 50
   prefab: {fileID: 6639000870170787828, guid: 2c893c643a9ebc048ad495633e64c66b, type: 3}
   text: Ready the business cards!
   unit: ' wishlists acquired'

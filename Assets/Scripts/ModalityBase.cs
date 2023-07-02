@@ -19,6 +19,10 @@ public abstract class ModalityBase : ScriptableObject {
         value++;
     }
 
+    public void ResetValue() {
+        value = 0;
+    }
+
     [SerializeField]
     GameObject prefab;
 

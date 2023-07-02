@@ -1,15 +1,18 @@
+using Slothsoft.UnityExtensions;
 using UnityEngine;
 using UnityEngine.UI;
 
 public sealed class NPC : MonoBehaviour {
     [SerializeField]
-    RectTransform rectTransform;
+    public RectTransform rectTransform;
     [SerializeField]
     Image body;
     [SerializeField]
     GameObject card;
+    [SerializeField]
+    float transparentAlpha = 0.5f;
 
-    public float speed { get; set; } = 10;
+    public float speed { get; set; } = 25;
 
     public float rotation { get; set; } = 0;
 
@@ -25,6 +28,10 @@ public sealed class NPC : MonoBehaviour {
 
     void Update() {
         rectTransform.anchoredPosition += speed * Time.deltaTime * Rotate(Vector2.right, rotation);
+    }
+
+    public void BecomeTransparent() {
+        color = color.WithAlpha(transparentAlpha);
     }
 
     static Vector2 Rotate(Vector2 v, float degrees) {

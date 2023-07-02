@@ -7,7 +7,6 @@ public sealed class CursorTarget : MonoBehaviour, IPointerDownHandler {
     UnityEvent<GameObject> onMouseDown = new();
 
     public void OnPointerDown(PointerEventData eventData) {
-        Debug.Log(this);
         onMouseDown.Invoke(gameObject);
     }
 
