@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20ba41d24d7497148b1e7c8ab3b1ccaa, type: 3}
   m_Name: New Clock Settings
   m_EditorClassIdentifier: 
-  startTime: 13
+  startTime: 9
   multiplier: 1
