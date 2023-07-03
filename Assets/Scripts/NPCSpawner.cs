@@ -10,8 +10,14 @@ public sealed class NPCSpawner : MonoBehaviour {
     [SerializeField]
     float speedVariation = 2;
 
+    [SerializeField]
+    float startingSpawns = 10;
+
     float spawnTimer;
 
+    void OnEnable() {
+        spawnTimer = startingSpawns;
+    }
     void Update() {
         spawnTimer += spawnsPerHour * GameClock.deltaTime;
         while (spawnTimer > 1) {
@@ -38,10 +44,10 @@ public sealed class NPCSpawner : MonoBehaviour {
 
     Vector2 CreateRandomPosition() {
         return (object)Random.Range(0, 4) switch {
-            0 => new Vector2(-0.15f, Random.value),
-            1 => new Vector2(1.15f, Random.value),
-            2 => new Vector2(Random.value, -0.15f),
-            3 => new Vector2(Random.value, 1.15f),
+            0 => new Vector2(-0.1f, Random.value),
+            1 => new Vector2(1.1f, Random.value),
+            2 => new Vector2(Random.value, -0.1f),
+            3 => new Vector2(Random.value, 1.1f),
             _ => throw new System.NotImplementedException(),
         };
     }

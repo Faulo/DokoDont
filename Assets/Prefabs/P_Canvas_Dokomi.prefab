@@ -351,4 +351,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcPrefab: {fileID: 8536847637398075580, guid: 482bc7017bb604547b078fbe351997ac, type: 3}
   spawnsPerHour: 100
-  speedVariation: 2
+  speedVariation: 3
+  startingSpawns: 100

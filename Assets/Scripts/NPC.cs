@@ -12,7 +12,7 @@ public sealed class NPC : MonoBehaviour {
     [SerializeField]
     float transparentAlpha = 0.5f;
 
-    public float speed { get; set; } = 25;
+    public float speed { get; set; } = 20;
 
     public float rotation { get; set; } = 0;
 
