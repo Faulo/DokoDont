@@ -1,13 +1,13 @@
-# A Game Title?
-A game?
+# Doko Don't
+A game about time management and shifting priorities.
 
 ## Jam Details
-Mixed Media Jam 2023: 
+Mixed Media Jam 2023
 - Date: 30.06.2023 - 02.07.2023
 - Site: Universität Bayreuth
-- Theme: ???
+- Theme: "Lieber nicht..." \[better not...\]
 
 ## Credits
-- Nic Schilling (sound design)
-- Daniel Schulz (programming)
+- Nic Schilling (music, art)
+- Daniel Schulz (programming, game design)
 - Tina Wolfrum (art)
