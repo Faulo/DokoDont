@@ -5,7 +5,7 @@ A game about time management and shifting priorities.
 Mixed Media Jam 2023
 - Date: 30.06.2023 - 02.07.2023
 - Site: Universität Bayreuth
-- Theme: "Lieber nicht..." \[better not...\]
+- Theme: "Lieber Nicht..." \[better not...\]
 
 ## Credits
 - Nic Schilling (music, art)
